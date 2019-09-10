@@ -56,7 +56,7 @@ def merge(arrA, arrB):
             bIndex += 1
 
     # put any remaining indicies on the end of the array
-    print('b', arrA[aIndex:], arrB[bIndex:])
+    # print('ending arrays: ', arrA[aIndex:], arrB[bIndex:])
     for e in arrA[aIndex:]:
         merged_arr.append(e)
     for e in arrB[bIndex:]:
