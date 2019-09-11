@@ -72,11 +72,7 @@ def merge_sort(arr):
     # TO-DO
 
     middle = len(arr)//2
-    # print(middle
     if len(arr) > 1:
-        # left = (arr[:middle])
-        # right = (arr[middle:])
-        # print(right, left)
         left = merge_sort(arr[:middle])
         right = merge_sort(arr[middle:])
         return merge(right, left)
@@ -99,6 +95,12 @@ def merge_in_place(arr, start, mid, end):
 
 def merge_sort_in_place(arr, l, r):
     # TO-DO
+
+    if r - l > 1:
+        mid = (l+r)//2
+        merge_sort_in_place(arr, l, mid)
+        merge_sort_in_place(arr, mid, r)
+        merge_in_place(arr, l, mid, r)
 
     return arr
 
